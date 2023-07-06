@@ -9,8 +9,8 @@ export default function Header() {
 
 return (
     <header>
-        <h3 className="logo">feedback<span><b>post</b></span></h3>
-        <ul>
+        <h3 className="logo">feedback<span>post</span></h3>
+        <ul className="header-nav">
             <li><a href="#">Home</a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="#">Delivery</a></li>
@@ -19,10 +19,9 @@ return (
             <li><a href="#">Contact</a></li>
         </ul>
         <div className="header-imgs">
-            <img src={favorite}></img>
-            <img src={user}></img>
-            <img src={addtocart}></img>
-
+            <img className="header-img" src={favorite}></img>
+            <img className="header-user" src={user}></img>
+            <img className="header-img" src={addtocart}></img>
         </div>
     </header>
 )
