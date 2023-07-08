@@ -14,9 +14,9 @@ header {
   flex-direction: row;
   align-items: center;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .header-nav {
@@ -52,3 +52,17 @@ a {
 }
 
 /* HEADER CSS END */
+
+
+
+.hero-img {
+  margin-left: auto;
+  float: right;
+  /* height: 50%; */
+  /* border: 1px solid red; */
+}
+.hero-div {
+  max-width: 97%;
+  border: 1px solid red;
+  margin: 0 auto;
+}
