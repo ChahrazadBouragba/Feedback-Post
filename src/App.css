@@ -8,7 +8,7 @@ body {
   font-family: 'Libre Caslon Display', serif;
 }
 
-/* HEADER CSS STARTS HERE */
+/** HEADER CSS STARTS HERE */
 header {
   display: flex;
   flex-direction: row;
@@ -16,14 +16,22 @@ header {
 
   /* border: 1px solid red; */
   justify-content: center;
-  padding: 2rem;
+  padding: 1.6rem;
+  padding-inline: 7rem;
 }
 
+.logo {
+  font-size: 1.7rem;
+ 
+  color: rgb(217, 184, 9);
+  
+}
+.logo-span {
+  font-weight: 600;
+  color: rgba(55, 146, 6, 0.678);
+}
 .header-nav {
   display: flex;
-  /* border: 1px solid red; */
-  /* margin-right: 20%; */
-  /* margin-left: 20%; */
 
   list-style-type: none;
   gap: 1.5rem;
@@ -34,6 +42,8 @@ header {
 a {
   text-decoration: none;
   list-style-type: none;
+  color: black;
+  font-size: 1.17rem;
 }
 
 .header-imgs {
@@ -43,26 +53,132 @@ a {
   /* border: 1px solid red; */
   justify-content: end;
 }
-.header-img {
-  width: 1rem;
+.header-favorite {
+  width: 1.4rem;
 }
 .header-user {
-    width: 1.3rem;
-  margin-top: -5px;
+  width: 2.1rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.2rem;
+}
+.premium {
+  outline: none;
+  font-size: 0.8rem;
+  padding: 0.85rem;
+  color: white;
+  background-color: black;
+  border-radius: 1.3rem;
+  border-bottom-right-radius: 0;
 }
 
-/* HEADER CSS END */
+/** HEADER CSS END */
 
 
 
+/** HERO CSS STARTS HERE */
+.hero-div {
+  max-width: 92%;
+  background-color: rgba(210, 183, 5, 0.644);
+  border-radius: 3rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  display: flex;
+}
+.hero-div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hero-description {
+  max-width: 60%;
+  margin-top: 4rem;
+  margin-left: 7rem;
+}
+.hero--name {
+  font-size: 2rem;
+  font-style: italic;
+  color: rgba(55, 146, 6, 0.658);
+}
+form {
+  margin-left: 7rem;
+  margin-top: 1.5rem;
+  max-width: 60%;
+  /* border: 1px solid red; */
+}
+.description {
+  margin-top: 0.6rem;
+}
+input {
+  width: 21rem;
+  padding: 1.2rem 0;
+  outline: none;
+  border: none;
+  border-radius: 0.6rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-indent: 1rem;
+}
+.search-button {
+  outline: none;
+  border: none;
+  padding: 1.2rem 1.2rem;
+  background-color: rgba(55, 146, 6, 0.438);
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+.hero--title {
+  font-size: 4rem;
+}
 .hero-img {
   margin-left: auto;
+  margin-right: 2rem;
   float: right;
+  width: 29rem;
   /* height: 50%; */
   /* border: 1px solid red; */
 }
-.hero-div {
-  max-width: 97%;
-  border: 1px solid red;
+/** HERO CSS END */
+
+
+
+/** MENU CSS STARTS HERE */
+.slide--container {
+  max-width: 92%;
   margin: 0 auto;
+  margin-top: 4rem;
+  padding-left: 1rem;
 }
+.menu-div {
+  /* background-color: rgba(58, 122, 23, 0.137); */
+  /* From https://css.glass */
+background-color: #98b538e0;
+
+  max-width: 73%;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  position: relative;
+  margin-top: 1rem;
+}
+.menu-general-title {
+  margin-bottom: 2rem;
+}
+.menu-discription {
+  display: flex;
+}
+.menu--img {
+  width: 7rem;
+  /* border: 1px solid red; */
+  margin-left: 3rem;
+  position: absolute;
+  margin-top: -2.7rem;
+}
+.menu-img {
+  width: 6rem;
+  /* border: 1px solid red; */
+  margin-left: 3rem;
+  position: absolute;
+  margin-top: -2rem;
+}
+/** MENU CSS END */
