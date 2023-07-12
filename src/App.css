@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Libre Caslon Display', serif;
+  background: linear-gradient(30deg, #ffffff96, #ffff008f, #00ff008a);
 }
 
 /** HEADER CSS STARTS HERE */
@@ -23,7 +24,7 @@ header {
 .logo {
   font-size: 1.7rem;
  
-  color: rgb(217, 184, 9);
+  color: rgba(210, 183, 5, 0.795);
   
 }
 .logo-span {
@@ -79,7 +80,7 @@ a {
 /** HERO CSS STARTS HERE */
 .hero-div {
   max-width: 92%;
-  background-color: rgba(210, 183, 5, 0.644);
+  background-color: rgba(210, 183, 5, 0.795);
   border-radius: 3rem;
   margin: 0 auto;
   margin-top: 2rem;
@@ -93,7 +94,7 @@ a {
 }
 .hero-description {
   max-width: 60%;
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-left: 7rem;
 }
 .hero--name {
@@ -136,6 +137,8 @@ input {
   margin-right: 2rem;
   float: right;
   width: 29rem;
+  margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
   /* height: 50%; */
   /* border: 1px solid red; */
 }
@@ -145,40 +148,134 @@ input {
 
 /** MENU CSS STARTS HERE */
 .slide--container {
-  max-width: 92%;
+  max-width: 90%;
   margin: 0 auto;
   margin-top: 4rem;
   padding-left: 1rem;
+  margin-bottom: 7rem;
 }
 .menu-div {
   /* background-color: rgba(58, 122, 23, 0.137); */
   /* From https://css.glass */
 background-color: #98b538e0;
 
-  max-width: 73%;
+  max-width: 77%;
   border-radius: 1.5rem;
   padding: 1rem;
   position: relative;
-  margin-top: 1rem;
+  margin-top: 2.3rem;
+  margin-bottom: 1rem;
 }
+
+.menu-div:hover {
+  background-color: rgba(210, 183, 5, 0.795);
+  scale: 1.1;
+}
+
+
 .menu-general-title {
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
 }
+
 .menu-discription {
   display: flex;
 }
+
+.menu--title {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+.menu-discription span {
+  color: rgba(31, 29, 29, 0.493);
+}
+.price {
+  font-weight: bolder;
+  color: rgba(85, 49, 30, 0.719);
+}
 .menu--img {
-  width: 7rem;
+  width: 8.9rem;
   /* border: 1px solid red; */
-  margin-left: 3rem;
+  margin-left: 3.4rem;
+  position: absolute;
+  margin-top: -3.7rem;
+}
+.menu--grill {
+  width: 8.3rem;
+  /* border: 1px solid red; */
+  margin-left: 4.7rem;
+  position: absolute;
+  margin-top: -3.3rem;
+}
+
+.menu--pizza {
+  width: 6.6rem;
+  /* border: 1px solid red; */
+  margin-left: 5.2rem;
   position: absolute;
   margin-top: -2.7rem;
+}
+.menu--sausage {
+  width: 7.5rem;
+  /* border: 1px solid red; */
+  margin-left: 4.4rem;
+  position: absolute;
+  margin-top: -2rem;
+}
+.menu--br {
+  width: 9rem;
+  /* border: 1px solid red; */
+  margin-left: 3.6rem;
+  position: absolute;
+  margin-top: -2.7rem;
+}
+.menu--pasta {
+  width: 9.6rem;
+  /* border: 1px solid red; */
+  margin-left: 3.5rem;
+  position: absolute;
+  margin-top: -3.3rem;
+}
+.menu--brg {
+  width: 8.7rem;
+  /* border: 1px solid red; */
+  margin-left: 4.6rem;
+  position: absolute;
+  margin-top: -2.1rem;
 }
 .menu-img {
   width: 6rem;
   /* border: 1px solid red; */
-  margin-left: 3rem;
+  margin-left: 5.9rem;
   position: absolute;
-  margin-top: -2rem;
+  margin-top: -2.5rem;
+}
+.menu-1br {
+  width: 6.6rem;
+  /* border: 1px solid red; */
+  margin-left: 5.7rem;
+  position: absolute;
+  margin-top: -1.7rem;
+}
+.menu-ch {
+  width: 7rem;
+  /* border: 1px solid red; */
+  margin-left: 6.7rem;
+  position: absolute;
+  margin-top: -1.9rem;
+}
+.menu--dounts {
+  width: 7.3rem;
+  /* border: 1px solid red; */
+  margin-left: 5.5rem;
+  position: absolute;
+  margin-top: -2.5rem;
+}
+.menu--choc {
+  width: 8rem;
+  /* border: 1px solid red; */
+  margin-left: 4.9rem;
+  position: absolute;
+  margin-top: -4.4rem;
 }
 /** MENU CSS END */

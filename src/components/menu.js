@@ -21,17 +21,36 @@ import chocoCake from '../img/menu/choco-cake.png'
 import dishBurger from '../img/menu/dish-bg.png'
 import meat from '../img/menu/meat.png'
 import pizzaSummer from '../img/menu/pizza-summer.png'
-
+import chocola from '../img/menu/chocola.png'
+import cocaBurger from '../img/menu/coca-burger.png'
+import dounts from '../img/menu/dounts2.png'
+import olivePizza from '../img/menu/olive-pizza.png'
+import tomatoSpagiti from '../img/menu/tomato-spagiti.png'
 
 export default class Menu extends Component {
+
+  constructor(props) {
+    super(props);
+    this.play = this.play.bind(this);
+    this.pause = this.pause.bind(this);
+  }
+  play() {
+    this.slider.slickPlay();
+  }
+  pause() {
+    this.slider.slickPause();
+  }
   render() {
-    var settings = {
+    const settings = {
       dots: true,
-      infinite: false,
-      speed: 500,
+      infinite: true,
       slidesToShow: 5,
-      slidesToScroll: 4,
+      slidesToScroll: 5,
       initialSlide: 0,
+      speed: 2700, // value for smoother transitions
+      autoplay: true,
+      autoplaySpeed: 1000,
+      cssEase: "ease-in-out",
       responsive: [
         {
           breakpoint: 1024,
@@ -61,42 +80,41 @@ export default class Menu extends Component {
     };
     return (
       <div className="slide--container">
-        <h2 className="menu-general-title"> Popular Menus </h2>
-        <Slider {...settings}>
+        <h2 className="menu-general-title"> Popular Menus 🔥</h2>
+  
+        <Slider ref={slider => (this.slider = slider)} {...settings}>
+
           <div className="menu-div">
             <div className="menu-discription">
                 <div>
-                <h3 className="menu--title">Pizza</h3>
+                <h3 className="menu--title">Pepperoni</h3>
                 <span className="menu--span">Starting</span>
                 <p className="price">$9.99</p>
                 </div>
-            <img className="menu--img" src={pizza}></img>
+            <img className="menu--pizza" src={olivePizza}></img>
             </div>
           </div>
 
-
-
-
-
           <div className="menu-div">
-          <div className="menu-discription">
+            <div className="menu-discription">
                 <div>
-                <h3 className="menu--title">Pizza</h3>
+                <h3 className="menu--title">Elk Burger</h3>
                 <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
+                <p className="price">$23.56</p>
                 </div>
-            <img className="menu-img" src={bigburger}></img>
+            <img className="menu--br" src={dishBurger}></img>
             </div>
           </div>
 
+
           <div className="menu-div">
           <div className="menu-discription">
-                <div>
-                <h3 className="menu--title">Pizza</h3>
+          <div>
+                <h3 className="menu--title">sausage</h3>
                 <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
+                <p className="price">$8.00</p>
                 </div>
-            <img className="menu-img" src={chocoCake}></img>
+            <img className="menu--sausage" src={sandwiches}></img>
             </div>
           </div>
 
@@ -104,45 +122,9 @@ export default class Menu extends Component {
           <div className="menu-div">
           <div className="menu-discription">
                 <div>
-                <h3 className="menu--title">Pizza</h3>
+                <h3 className="menu--title">French Fries</h3>
                 <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
-                </div>
-            <img className="menu-img" src={dishBurger}></img>
-            </div>
-          </div>
-
-
-          <div className="menu-div">
-          <div className="menu-discription">
-                <div>
-                <h3 className="menu--title">Pizza</h3>
-                <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
-                </div>
-            <img className="menu-img" src={meat}></img>
-            </div>
-          </div>
-
-
-          <div className="menu-div">
-          <div className="menu-discription">
-                <div>
-                <h3 className="menu--title">Pizza</h3>
-                <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
-                </div>
-            <img className="menu-img" src={pizzaSummer}></img>
-            </div>
-          </div>
-
-
-          <div className="menu-div">
-          <div className="menu-discription">
-                <div>
-                <h3 className="menu--title">Pizza</h3>
-                <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
+                <p className="price">$3.00</p>
                 </div>
             <img className="menu-img" src={fries}></img>
             </div>
@@ -152,11 +134,11 @@ export default class Menu extends Component {
           <div className="menu-div">
           <div className="menu-discription">
           <div>
-                <h3 className="menu--title">Pizza</h3>
+                <h3 className="menu--title">Hamburger</h3>
                 <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
+                <p className="price">$10.74</p>
                 </div>
-            <img className="menu-img" src={burger}></img>
+            <img className="menu-1br" src={burger}></img>
             </div>
           </div>
 
@@ -164,39 +146,127 @@ export default class Menu extends Component {
           <div className="menu-div">
           <div className="menu-discription">
           <div>
-                <h3 className="menu--title">Pizza</h3>
+                <h3 className="menu--title">Brisco</h3>
                 <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
-                </div>
-            <img className="menu--img" src={italianopizza}></img>
-            </div>
-          </div>
-
-
-          <div className="menu-div">
-          <div className="menu-discription">
-          <div>
-                <h3 className="menu--title">Pizza</h3>
-                <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
+                <p className="price">$7.56</p>
                 </div>
             <img className="menu--img" src={img}></img>
             </div>
           </div>
 
+
           <div className="menu-div">
-          <div className="menu-discription">
-          <div>
-                <h3 className="menu--title">Pizza</h3>
+            <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Meat Burger</h3>
                 <span className="menu--span">Starting</span>
-                <p className="price">14.00</p>
+                <p className="price">$9.99</p>
                 </div>
-            <img className="menu-img" src={sandwiches}></img>
+                <img className="menu--brg" src={cocaBurger}></img>
             </div>
           </div>
 
+
+          <div className="menu-div">
+            <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Grill Pizza</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$8.00</p>
+                </div>
+            <img className="menu--grill" src={pizza}></img>
+            </div>
+          </div>
+
+
+          <div className="menu-div">
+            <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Pasta</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$15.23</p>
+                </div>
+            <img className="menu--pasta" src={tomatoSpagiti}></img>
+            </div>
+          </div>
+
+
+
+          <div className="menu-div">
+          <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Cheese Burger</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$14.00</p>
+                </div>
+            <img className="menu-ch" src={bigburger}></img>
+            </div>
+          </div>
+
+          
+          <div className="menu-div">
+          <div className="menu-discription">
+                <div>
+                <h3 className="menu--title"> Skirt Steak</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$19.23</p>
+                </div>
+            <img className="menu--grill" src={meat}></img>
+            </div>
+          </div>
+
+
+          <div className="menu-div">
+          <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Olive Pizza</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$14.00</p>
+                </div>
+            <img className="menu--grill" src={pizzaSummer}></img>
+            </div>
+          </div>
+
+
+          <div className="menu-div">
+          <div className="menu-discription">
+          <div>
+                <h3 className="menu--title">Yeast Donut</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$3.99</p>
+                </div>
+            <img className="menu--dounts" src={dounts}></img>
+            </div>
+          </div>
+
+
+          <div className="menu-div">
+          <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Meringue</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$20.55</p>
+                </div>
+            <img className="menu--grill" src={chocoCake}></img>
+            </div>
+          </div>
+
+
+          <div className="menu-div">
+          <div className="menu-discription">
+                <div>
+                <h3 className="menu--title">Pachanga Grill</h3>
+                <span className="menu--span">Starting</span>
+                <p className="price">$7.00</p>
+                </div>
+            <img className="menu--choc" src={chocola}></img>
+            </div>
+          </div>
+
+
  
         </Slider>
+        
       </div>
     );
   }
