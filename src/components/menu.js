@@ -82,14 +82,14 @@ export default class Menu extends Component {
       <div className="slide--container">
         <h2 className="menu-general-title"> Popular Menus 🔥</h2>
   
-        <Slider ref={slider => (this.slider = slider)} {...settings}>
+        <Slider ref={slider => (this.slider = slider)} {...settings} className="menu-wrapper">
 
           <div className="menu-div">
             <div className="menu-discription">
                 <div>
-                <h3 className="menu--title">Pepperoni</h3>
-                <span className="menu--span">Starting</span>
-                <p className="price">$9.99</p>
+                  <h3 className="menu--title">Pepperoni</h3>
+                  <span className="menu--span">Starting</span>
+                  <p className="price">$9.99</p>
                 </div>
             <img className="menu--pizza" src={olivePizza}></img>
             </div>

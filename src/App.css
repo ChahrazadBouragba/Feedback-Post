@@ -6,29 +6,64 @@
 
 body {
   font-family: 'Libre Caslon Display', serif;
-  background: linear-gradient(30deg, #ffffff96, #ffff008f, #00ff008a);
+  /* background-color: hsl(0 0% 0% / 0.3);
+  backdrop-filter: blur(0.6rem); */
+  /* background: linear-gradient(-45deg, #efd345d2, #82954B,#efd345c5, #82954B),
+  linear-gradient(-45deg, #EFD345, #82954B,#EFD345, rgba(255, 255, 255, 0.589), #82954B);
+
+
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  animation-direction:alternate;
+	background-size: 400% 400%; */
+
+
+ 
 }
+
+.background {
+  background-image: url(../src/img/hero/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 2rem;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /** HEADER CSS STARTS HERE */
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  /* border: 1px solid red; */
   justify-content: center;
-  padding: 1.6rem;
+  padding: 1.2rem;
   padding-inline: 7rem;
+  white-space: nowrap;
+}
+header:hover {
+  background-color: aliceblue;
 }
 
 .logo {
   font-size: 1.7rem;
- 
   color: rgba(210, 183, 5, 0.795);
-  
 }
+
 .logo-span {
-  font-weight: 600;
+  font-weight: 900;
+  font-style: oblique;
   color: rgba(55, 146, 6, 0.678);
 }
 .header-nav {
@@ -80,12 +115,27 @@ a {
 /** HERO CSS STARTS HERE */
 .hero-div {
   max-width: 92%;
-  background-color: rgba(210, 183, 5, 0.795);
+  /* background-color: rgba(210, 183, 5, 0.795); */
   border-radius: 3rem;
   margin: 0 auto;
   margin-top: 2rem;
 
   display: flex;
+/* From https://css.glass */
+/* background: rgba(210, 255, 183, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px); */
+border-radius: rgba(255, 255, 255, 0.3);
+
+background: rgba(210, 255, 183, 0.2);
+backdrop-filter: saturate(180%) blur(10px);
+/* 
+background-color: hsl(0 0% 0% / 0.3); */
+backdrop-filter: blur(0.6rem);
+/* background: linear-gradient(99deg, #F2D544, #99bf9e); */
+
 }
 .hero-div::after {
   content: "";
@@ -107,12 +157,13 @@ form {
   margin-top: 1.5rem;
   max-width: 60%;
   /* border: 1px solid red; */
+  white-space: nowrap;
 }
 .description {
   margin-top: 0.6rem;
 }
 input {
-  width: 21rem;
+  width: 80%;
   padding: 1.2rem 0;
   outline: none;
   border: none;
@@ -151,8 +202,12 @@ input {
   max-width: 90%;
   margin: 0 auto;
   margin-top: 4rem;
-  padding-left: 1rem;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
+}
+.menu-wrapper {
+  /* border: 1px solid red; */
+  padding-inline: 1rem;
+
 }
 .menu-div {
   /* background-color: rgba(58, 122, 23, 0.137); */
@@ -279,3 +334,182 @@ background-color: #98b538e0;
   margin-top: -4.4rem;
 }
 /** MENU CSS END */
+
+
+/** About CSS STARTS HERE */
+.about-div {
+  /* background-color: rgba(210, 183, 5, 0.795);
+  scale: 1.1; */
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.about-des {
+  max-width: 30%;
+}
+/** About CSS END */
+
+.review-wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+.review-extraDiv {
+  display: flex;
+  gap: 2.5rem;
+}
+
+
+
+blockquote {
+  font-family: Georgia, serif;
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em 2em 0.5em 3em;
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+  font-family: Georgia, serif;
+  position: absolute;
+  font-size: 6em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: "\201C";
+}
+blockquote:after {
+  font-family: Georgia, serif;
+  position: absolute;
+ /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+  float:right;
+  font-size:6em;
+  line-height: 1;
+  right:0;
+  bottom:-0.5em;
+  content: "\201D";
+}
+blockquote footer {
+  padding: 0 2em 0 0;
+  text-align:right;
+}
+blockquote cite:before {
+  content: "\2013";
+}
+
+.review-div {
+  display: flex;
+  flex-direction: row;
+  backdrop-filter: saturate(180%) blur(10px);
+  padding: 4.5rem;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+ backdrop-filter: blur(0.6rem);
+
+ border-radius: rgba(255, 255, 255, 0.3);
+
+background: rgba(210, 255, 183, 0.2);
+}
+.review-content {
+  display: flex;
+  align-items: center;
+}
+
+.review-wrapper .slick-dots {
+  /* display: none !important; */
+  color: green;
+}
+.review-wrapper .slick-arrow {
+  top: 100% !important;
+  z-index: 999;
+  background-color: green;
+  border-radius: 100%;
+  
+}
+.review-wrapper .slick-arrow:hover {
+  background-color: yellow;
+}
+.review-wrapper .slick-arrow:first-child {
+  margin-left: 58rem !important;
+}
+
+.customer-img {
+  border-radius: 100%;
+  max-width: 17rem;
+  border: 3px solid yellow;
+}
+
+
+
+
+
+/** SERVECES CSS STARTS HERE */
+.services-div {
+  display: flex;
+  max-width: 90%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.service-desc {
+  border-radius: 1.5rem;
+  background-color: #98b538e0;
+  max-width: 20%;
+  padding: 2rem;
+}
+/** SERVECES CSS END */
+
+
+/** SUBSCRIBE CSS STARTS HERE */
+.Sub-wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 6rem;
+  padding: 4rem;
+  padding-left: 6rem;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3rem;
+  backdrop-filter: blur(0.6rem);
+ 
+  border-radius: rgba(255, 255, 255, 0.3);
+ 
+ background: rgba(210, 255, 183, 0.2);
+}
+
+.Sub-wrapper form {
+  margin-left: 0;
+  max-width: 95%;
+
+}
+/** SUBSCRIBE CSS END */
+
+.footer-section {
+  background-color: rgba(240, 248, 255, 0.966);
+  margin-bottom: -2rem;
+  margin-top: 8rem;
+  padding-bottom: 0;
+
+}
+.footer-content {
+  display: flex;
+  padding: 3rem;
+  gap: 3rem;
+  margin: 0 auto;
+  /* align-items: center; */
+  justify-content: center;
+}
+.main-footer-div {
+  max-width: 30%;
+}
+.footer-section footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.473);
+}
