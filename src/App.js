@@ -8,20 +8,24 @@ import Review from './components/Review';
 import Services from './components/Services';
 import Subscribe from './components/subscribe';
 import Footer from './components/Footer';
+import Favorites from './components/favorites';
 
 function App() {
   return (
     <div className="App">
       <div className='background'>
         <Header/>
-        <Hero/>
 
-        <Menu/>
+        <Favorites/>
+
+        {/* <Hero/> */}
+
+        {/* <Menu/> */}
 
       {/* <About/> */}
-      <Review/>
+      {/* <Review/>
       <Services/>
-      <Subscribe/>
+      <Subscribe/> */}
 
       <Footer/>
       </div>

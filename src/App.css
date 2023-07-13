@@ -51,6 +51,9 @@ header {
   padding: 1.2rem;
   padding-inline: 7rem;
   white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 header:hover {
   background-color: aliceblue;
